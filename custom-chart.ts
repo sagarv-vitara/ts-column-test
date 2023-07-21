@@ -165,6 +165,7 @@ const renderChart = async (ctx: CustomChartContext): Promise<void> => {
         });
     } finally {
         ctx.emitEvent(ChartToTSEvent.RenderComplete, null);
+        ctx.on(ChartToTSEvent.OpenContextMenu, function(){debugger;});
     }
 };
 
